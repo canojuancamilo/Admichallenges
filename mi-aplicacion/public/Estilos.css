@@ -1,0 +1,331 @@
+/*--------------------------Header nav styles------------------------------*/
+.gracias{
+    text-align: center;
+    width: 50%; 
+    margin: auto;
+    display: none;
+    
+}
+.tabla{
+    margin-left:30%;
+    margin-top: 15%;
+}
+.gracias1{
+display: block;
+text-align: center;
+width: 50%; 
+margin: auto;
+}
+
+
+.btn-up{
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 0px;
+    height: 40px;
+    width: 200px;
+    border: 2px solid black;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    font-size: 18px;
+}
+
+.btn-up:hover{
+    cursor: pointer;
+    background-color: #10B510;
+    color: white;
+    border: 2px solid #10B510;
+}
+
+#thank{
+    width: 50%;  
+    padding-right: 1%;  
+}
+#upload{
+    width: 50%;
+    float: right;
+    margin-top: -18px;
+    border-left:solid 1px black;
+}
+
+#gracias h1{
+    font-weight: bold;
+    color: black;
+    margin-bottom:40px; 
+}
+
+#gracias p{
+    width: 72%;
+    margin-left: 13.5%;
+    margin-right: 13.5%;
+}
+
+a{
+    color: black;
+}
+
+#a{
+    text-decoration: none;
+    display: block;
+    text-decoration: none;
+    text-decoration-line: none;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 24px;
+    padding-right: 18px;
+    text-align: right;
+}
+
+a#a:link   
+{   
+ text-decoration:none;
+ font-weight:900;
+} 
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#header{
+    background-color: white; opacity: 0.9;
+    font-size: 13px;
+    height: 50px;
+}
+
+ul{ 
+    list-style-type: none;
+    text-align: center;
+}
+
+.img{
+    float: left;
+    margin-right:493px;
+    margin-left: 21px;
+    margin-top: 5px;
+}
+
+.a{
+    text-decoration: none;
+    display: block;
+}
+li a:hover{
+    color: white;
+    background-color: black;
+}
+
+.li{
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.ul{
+    width: 173px;
+}
+
+
+a.a:link   
+{   
+ text-decoration:none;
+ font-weight:900;
+} 
+
+.a{
+    text-decoration: none;
+    color: black;
+    text-decoration-line: none;
+    padding-top: 18px;
+    padding-bottom: 16px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+
+.title{
+    position: relative;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    color: #F4F8F8;
+    text-align: center;
+    font-size: 90px;
+    line-height: .8;
+}
+
+
+
+.sect-UI{
+    background: #5B96BF;
+    background-image:100%;
+    background-image: url("https://www.globant.com/sites/all/themes/globant/images/mock/internals/studios/poly-pattern-c2.png");
+    border-bottom-color: #5B97BF;
+}
+
+.sect-UI{
+    height: 400px;
+    border-bottom: 4px solid #fff;
+    padding: 180px 0 0;
+}
+
+.halo{
+    padding: 55px 20px;
+    text-align: center;
+    font-size: .875em;
+}
+
+
+
+.nav ul{
+ display: none;
+ position: absolute;
+ margin-top: -7px;
+}
+
+
+#nav > li{
+    font-size: 13px;
+    float: left;
+    margin-top: -12px;
+}
+li{
+    background-color: white;
+}
+
+#nav li:hover > ul{
+display: block;
+}
+
+.nav li:hover>.lista{
+    display: block;
+    margin-left: 173px;
+    margin-top:-51px;
+}
+
+/*--------------------------Header nav End------------------------------*/
+/*--------------------------Body 2 styles------------------------------*/
+.Div-main2{
+    background-color: black;
+}
+
+#Div1{
+    padding: 0px 12px 0px 40px;
+    border-right: 1px solid #FFFFFF;
+}
+
+#Div2{
+    padding: 0px 10px 0px 10px;
+    border-right: 1px solid #FFFFFF;
+}
+#Div3{
+    padding: 0px 40px 0px 10px;
+    border-right: 1px solid #FFFFFF;
+}
+#p1{
+    padding: 0px 0px 140px 0px;
+    color: white;
+    font-family: "Roboto Slab";
+    font-size: 20.3px;
+    font-weight: lighter;
+
+}
+#p2{
+    padding: 0px 10px 136px 10px;
+    color: white;
+    font-family: "Roboto Slab";
+    font-size: 20.3px;
+    font-weight: lighter;
+}
+#p3{
+    padding: 0px 10px 188px 10px;
+    color: white;
+    font-family: "Roboto Slab";
+    font-size: 20.3px;
+    font-weight: lighter;
+}
+
+.Titulo{
+    color: white;
+    padding: 0px 10px 0px 40px;
+    font-weight: bold;
+    font-weight: 800;
+    font-size: 22px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Titulo2{
+    color: #5c97bf;
+    font-size: 150px;
+    font-weight: bolder;
+    font-weight: 900;
+
+}
+.Titulo3{
+    color: white;
+    font-weight: bolder;
+    font-weight: 800;
+    font-size: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Boton{
+    position: static;
+    color: #FFFFFF; 
+    border: 2px #FFFFFF solid; 
+    padding: 15px 80px 15px 80px; 
+    background-color: #000000; 
+    font-size: 70;
+    font-weight: 900; 
+    transition: all .0s, color 0s;
+}
+.Boton:hover{
+    background-color: #FFFFFF;
+    color: #000000; 
+}
+
+/*--------------------------End Body 2 ------------------------------*/
+
+/*-------------------------- footer ------------------------------*/
+footer{
+    background-color: #222;
+    font-size: "9";
+   }
+
+#all{
+    text-align: center;
+      color :white;
+      font-weight: bold;
+      font-family: "arial black";
+      font-size: 13px;
+    
+     }
+    
+#img{
+      width: 25px; height: 25px;
+      
+    }
+    
+#privacy{
+         color: gray;
+         font-weight: bold;
+         text-decoration:none;   
+        }
+    
+#reserve{
+         margin-left: 69.5%;
+         color:gray;
+         font-weight: bold;
+         text-decoration:none;   
+        }
+    
+hr {
+      color: white;
+      background-color:#CCC;
+   }
+
+  #icons {
+    
+           text-decoration:none;   
+    
+        }
+
+/*---------------- end footer-------------*/
