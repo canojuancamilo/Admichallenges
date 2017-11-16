@@ -1,0 +1,9 @@
+{
+  "rules": {
+    ".read": "auth != true",
+    ".write": "auth != true",
+    "adminContent": {
+      ".read": "auth.uid === 'some-uid'"
+    }
+  }
+}
