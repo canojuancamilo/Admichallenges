@@ -1,9 +1,8 @@
 {
-  "name": "my-app",
+  "name": "mi-aplicacion",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "firebase": "^4.6.2",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17"
