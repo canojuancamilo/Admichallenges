@@ -154,6 +154,14 @@ a.a:link
 
 
 
+#icon-ok{
+ color: #DBD111;
+}
+
+.icon{
+    margin:2%;
+    font-size: 30px;
+}
 .sect-UI{
     background: #5B96BF;
     background-image:100%;
@@ -338,4 +346,9 @@ hr {
 
         margin-bottom: 25px;
     
+}
+/*estyls component view-results*/
+.view_table{
+    float:left;
+    text-align: center;
 }

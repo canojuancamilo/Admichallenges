@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './componentes/Estilos.css';
 import Start from './componentes/start-component';
 import View_Result from './componentes/view-results-component';
+
 
 class App extends Component {
   constructor(props){
@@ -48,6 +48,7 @@ class App extends Component {
               ''
           )
         }
+       
       </div>
     );
   }
