@@ -4,12 +4,12 @@ import './App.css';
 import './componentes/Estilos.css';
 import Start from './componentes/start-component';
 import View_Result from './componentes/view-results-component';
-
+import  Admi from './componentes/admi-component';
 class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      estado:1
+      estado:2
     }
   }
   render() {
@@ -30,24 +30,40 @@ class App extends Component {
                             <button  type="button" class="btn btn-primary">VIEW CHALLENGES</button>
                             <button  type="button" class="btn btn-primary">VIEW RESULTS CHALLENGES</button>
                   </div>
-                  <Start>
-                  </Start>
+                
+              
+                  <Start/>
               </div>
             :
            ''
+         
           )
         }
         {
           (
             this.state.estado === 1
             ?
-              <div style={{marginTop:60+'px'}}>
-                  <View_Result></View_Result>
+              <div style={{marginTop:90+'px'}}>
+            <View_Result/>
+             
               </div>
             :
               ''
           )
         }
+        {
+          (
+            this.state.estado === 2
+            ?
+              <div style={{marginTop:60+'px'}}>
+              <Admi/>
+             
+              </div>
+            :
+              ''
+          )
+        }
+      
       </div>
     );
   }
