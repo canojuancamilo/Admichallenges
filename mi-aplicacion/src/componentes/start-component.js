@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
+import './Estilos.css';
 
 class Start extends Component {
+
+   
 
     render() {
 
         return (
-            <div>
-            
-        <table>
-                <tr>
-                  <th width="1000">CHALLENGE</th>
-                  <th>QUALIFICATION</th>
-                  <th>CV</th>
-                </tr>
-              </table>
-              </div>
+            <div key={1000}>
+                start-component
+                
+            </div>
         );
     }
 }

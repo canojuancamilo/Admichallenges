@@ -29,8 +29,8 @@ class App extends Component {
                     </h1>
                   </section>
                   <div align= "center" id="button">
-                            <button  type="button" class="btn btn-primary">VIEW CHALLENGES</button>
-                            <button  type="button" class="btn btn-primary" onClick={this.change_state.bind(this,1)}>VIEW RESULTS CHALLENGES</button>
+                            <button  type="button" className="btn btn-primary">VIEW CHALLENGES</button>
+                            <button  type="button" className="btn btn-primary" onClick={this.change_state.bind(this,1)}>VIEW RESULTS CHALLENGES</button>
                   </div>
                   
               </div>
