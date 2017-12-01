@@ -158,9 +158,15 @@ a.a:link
  color: #DBD111;
 }
 
+.icon-visto{
+    color: #4026C2;
+   }
+
 .icon{
     margin:2%;
     font-size: 30px;
+    background-color: transparent;
+    border:0;
 }
 .sect-UI{
     background: #5B96BF;
