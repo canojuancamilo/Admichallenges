@@ -61,7 +61,7 @@ class Start extends Component {
                                 var result = [];
                                 for (var f = 0; numero > f; f++) {
                                     result.push(
-                                        <tr key={f+1005}>
+                                        <tr key={f+10005}>
                                             <td>
                                                 <div style={{margin:3+'px'}}>
                                                     <b>
@@ -95,7 +95,7 @@ class Start extends Component {
                                     )
                                 }
                                 retos.push(
-                                    <table className="view_table" key={120+i}  style={{width:this.state.pantalla+'%'}}>
+                                    <table className="view_table" key={1200+i}  style={{width:this.state.pantalla+'%'}}>
                                        <thead> 
                                             <tr>
                                                 <th>
@@ -112,7 +112,7 @@ class Start extends Component {
                                 );
                             }
                             filassMostrar.push(
-                                <tbody key={'g'+key}>
+                                <tbody key={'h'+key}>
                                     <tr key={key}>
                                         <td>
                                             {retos}
@@ -155,14 +155,13 @@ class Start extends Component {
                                 <thead>
                                     <tr>
                                         <th style={{width:80+'%'}}>CHALLENGE</th>
-                                        <th>QUALIFIED</th>
+                                        <th style={{width:4.5+'%'}}>QUALIFIED</th>
                                         <th style={{width:4.5+'%'}}>CV</th>
                                     </tr>     
                                 </thead> {this.state.tabla}
                         </table>           
                     </div>
                 </div>
-                
             </div>            
         );
     }
