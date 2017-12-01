@@ -18,7 +18,7 @@ class App extends Component {
       <div className="App">
         {
           (
-            this.state.estado === 0
+            this.state.estado === 1
             ?
               <div>
                   <section id="one"  className="sect-UI halo">
