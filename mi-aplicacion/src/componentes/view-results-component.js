@@ -16,25 +16,25 @@ class View_Result extends Component {
         this.visto=this.visto.bind(this)
     }
     
-    renderarChulos(chulosCompletados, chulosTotales,key){
-        var htmlChulos = [];
-        for (var i = 1; i <= chulosCompletados; i++) {
-            htmlChulos.push(
+    renderar_start(star_Complet, start_total,key){
+        var html_start = [];
+        for (var i = 1; i <= star_Complet; i++) {
+            html_start.push(
                 <button type="submit"  className="colum icon" key={i} onClick={this.handleClick.bind(this, key,i)}>
                     <span className="glyphicon glyphicon-star" id="icon-ok" key={i}></span>
                 </button>
             );  
         }
     
-        for (var i=1; i <= chulosTotales - chulosCompletados; i++) {
-            var f=chulosCompletados+i;
-            htmlChulos.push(
+        for (var i=1; i <= start_total - star_Complet; i++) {
+            var f=star_Complet+i;
+            html_start.push(
                 <button type="button"  className="colum icon" key={f} onClick={this.handleClick.bind(this, key,f)}>
-                    <span className="glyphicon glyphicon-star-empty" key={i+chulosTotales}></span>
+                    <span className="glyphicon glyphicon-star-empty" key={i+start_total}></span>
                 </button>
             );  
         } 
-        return htmlChulos;
+        return html_start;
     }    
     
     handleClick(key,Puntuacion) {
@@ -61,8 +61,8 @@ class View_Result extends Component {
                     var result = [];
                     for (var f = 0; numero > f; f++) {
                         result.push(
-                            <tr key={f+1005}>
-                                <td>
+                            <div className="Row-1" key={f+1005}>
+                                <div className="Cell-1">
                                     <button type="button" className="btn btn-primary" data-toggle="modal" data-target={'#'+key+f+i}>
                                         <span className="glyphicon glyphicon-eye-open">
                                         </span> &nbsp; {datas[key].Retos[most + i][f]['item']}
@@ -90,48 +90,47 @@ class View_Result extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                </td>
-                            </tr>
+                                </div>
+                            </div>
                         )
                     }
                     retos.push(
-                        <table className="view_table" key={120+i}  style={{width:this.state.pantalla+'%'}}>
-                            <thead> 
-                                <tr>
-                                    <th>
+                        <div className="Table-1 view_table" key={120+i}  style={{width:this.state.pantalla+'%'}}>
+                            <div className="Heading-1"> 
+                                <div className="Row-1">
+                                    <div className="Cell-1">
                                         <b>
                                             Reto{i}
                                         </b>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="Row-1">
                                 {result}
-                            </tbody>
-                        </table>
+                            </div>
+                        </div>
                     );
                 }
                 filassMostrar.push(
-                    <tbody key={'g'+key}>
-                        <tr key={key}>
-                            <td>
+                    
+                        <div className="Row-1" key={key}>
+                            <div className="Cell-1">
                                 {retos}
-                            </td>
-                            <td>
-                                {this.renderarChulos(datas[key].puntuacion,5,key)}
-                            </td>
-                            <td>
+                            </div>
+                            <div className="Cell-1">
+                                {this.renderar_start(datas[key].puntuacion,5,key)}
+                            </div>
+                            <div className="Cell-1">
                                 <a href={datas[key].CVURL} target="_blank">
                                     <span className="glyphicon glyphicon-download-alt icon"></span>
                                 </a>
-                            </td>
-                            <td>
+                            </div>
+                            <div className="Cell-1">
                                 <button type="button"  className="colum icon" onClick={this.visto.bind(this, key)}>
                                     <span className={datas[key].qualified+' icon'}></span>
                                 </button>
-                            </td>
-                        </tr>
-                    </tbody>    
+                            </div>
+                        </div>   
                 )
                 retos = [];
             }
@@ -145,8 +144,8 @@ class View_Result extends Component {
         var Puntuacio=0;
         refirebase.on('value', (snapshot) =>{
             var datas = snapshot.val();
-            visto=((datas[key].qualified== "glyphicon glyphicon-eye-open icon-visto") ? "glyphicon glyphicon-eye-close" : "glyphicon glyphicon-eye-open icon-visto");
-            Puntuacio=((datas[key].qualified== "glyphicon glyphicon-eye-close") ? 1 : 0 );
+            visto=((datas[key].qualified=== "glyphicon glyphicon-eye-open icon-visto") ? "glyphicon glyphicon-eye-close" : "glyphicon glyphicon-eye-open icon-visto");
+            Puntuacio=((datas[key].qualified=== "glyphicon glyphicon-eye-close") ? 1 : 0 );
         });
         refirebase.child(key).update({
             puntuacion: Puntuacio,
@@ -162,21 +161,20 @@ class View_Result extends Component {
         return (
             <div key={1000}>
                 <div>
-                    <div >
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th style={{width:74.5+'%'}}>Retos</th>
-                                    <th style={{width:15.5+'%'}}>PUNTUACION</th>
-                                    <th style={{width:4.5+'%'}}>CV</th>
-                                    <th style={{width:4.5+'%'}}>VISTO</th>
-                                </tr>     
-                            </thead>                                
-                                {this.state.tabla}
-                        </table>           
+                    <div className="Table-1" style={{width:90+'%',marginTop:5+'%',marginBottom:5+'%',marginLeft:5+'%',marginRight:5+'%'}}>
+                    <div className="Heading-1"> 
+                    <div className="Cell-1" style={{width:72+'%'}}>
+                    Retos   </div>
+                                    <div className="Cell-1"style={{width:18+'%'}}>PUNTUACION</div>
+                                    <div className="Cell-1" style={{width:4.5+'%'}}>CV</div>
+                                    <div className="Cell-1" style={{width:4.5+'%'}}>VISTO</div>
+                         
+                    </div>                                
+                                {this.state.tabla}          
                     </div>
                 </div>
-            </div>
+                
+        </div>  
         );
     }
 }

@@ -14,29 +14,37 @@ class Start extends Component {
             {pantalla:0},
             {puntuacion:''}
         ]};
-        
+        this.handleClick=this.handleClick.bind(this);
+      //  this.visto=this.visto.bind(this)
     }
-     Mostrarcalificados(chulosCompletados, chulosTotales){
-            const htmlChulos = [];
-            for (var i = 0; i < chulosCompletados; i++) {
-            htmlChulos.push(
-                <span className="colum icon" key={i+2000}>
+    Mostrarcalificados(star_Complet, start_total,key){
+        var Calificado = [];
+        for (var i = 1; i <= star_Complet; i++) {
+            Calificado.push(
+                <button type="submit"  className="colum icon" key={i} onClick={this.handleClick.bind(this, key,i)}>
                     <span className="glyphicon glyphicon-star" id="icon-ok" key={i}></span>
-                </span>
-            ) ;  
-            }
-    
-            for (var i=0; i < chulosTotales - chulosCompletados; i++) {
-            htmlChulos.push(
-                <span className="colum icon" key={i+chulosTotales+10}>
-                    <span className="glyphicon glyphicon-star-empty" key={i+chulosTotales}></span>
-                </span>
-            ) ;  
-            }
-            console.log(htmlChulos);
-            return htmlChulos;
+                </button>
+            );  
         }
+    
+        for (var i=1; i <= start_total - star_Complet; i++) {
+            var f=star_Complet+i;
+            Calificado.push(
+                <button type="button"  className="colum icon" key={f} onClick={this.handleClick.bind(this, key,f)}>
+                    <span className="glyphicon glyphicon-star-empty" key={i+start_total}></span>
+                </button>
+            );  
+        } 
+        return Calificado;
+    }    
 
+    handleClick(key,Puntuacion) {
+        var referenciafirebase=firebase.database().ref().child("Retos_result");
+        referenciafirebase.child(key).update({
+            puntuacion: Puntuacion,
+            qualified:'glyphicon glyphicon-eye-open icon-visto'
+        });
+    }
     crear_tabla(){
         
          var refirebase = firebase.database().ref().child("Retos_result");
@@ -95,40 +103,39 @@ class Start extends Component {
                                     )
                                 }
                                 retos.push(
-                                    <table className="view_table" key={1200+i}  style={{width:this.state.pantalla+'%'}}>
-                                       <thead> 
-                                            <tr>
-                                                <th>
-                                                    <b>
-                                                        Reto{i}
-                                                    </b>
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {result}
-                                        </tbody>
-                                    </table>
+                                    <div className="Table-1 view_table" key={120+i}  style={{width:this.state.pantalla+'%'}}>
+                            <div className="Heading-1"> 
+                                <div className="Row-1">
+                                    <div className="Cell-1">
+                                        <b>
+                                            Reto{i}
+                                        </b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="Row-1">
+                                {result}
+                            </div>
+                        </div>
                                 );
                             }
                             filassMostrar.push(
-                                <tbody key={'h'+key}>
-                                    <tr key={key}>
-                                        <td>
-                                            {retos}
-                                        </td>
-                                        <td>
-                                            {this.Mostrarcalificados(datas[key].puntuacion)}
-                                        </td>
-                                        <td>
-                                            <a href={datas[key].CVURL} target="_blank">
-                                                <span className="glyphicon glyphicon-download-alt icon"></span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>    
-                            )
-                                retos = [];
+                                <div className="Row-1" key={key}>
+                            <div className="Cell-1">
+                                {retos}
+                            </div>
+                            <div className="Cell-1">
+                                {this.Mostrarcalificados(datas[key].puntuacion,5,key)}
+                            </div>
+                            <div className="Cell-1">
+                                <a href={datas[key].CVURL} target="_blank">
+                                    <span className="glyphicon glyphicon-download-alt icon"></span>
+                                </a>
+                            </div>
+                           
+                        </div>   
+                )
+                retos = [];
                      }
                    
                     
@@ -138,6 +145,21 @@ class Start extends Component {
              console.log(filassMostrar);
          });  
      }
+
+   /*  visto(key){
+        var refirebase = firebase.database().ref().child("Retos_result");
+        var visto='';
+        var Puntuacio=0;
+        refirebase.on('value', (snapshot) =>{
+            var datas = snapshot.val();
+            visto=((datas[key].qualified=== "glyphicon glyphicon-eye-open icon-visto") ? "glyphicon glyphicon-eye-close" : "glyphicon glyphicon-eye-open icon-visto");
+            Puntuacio=((datas[key].qualified=== "glyphicon glyphicon-eye-close") ? 1 : 0 );
+        });
+        refirebase.child(key).update({
+            puntuacion: Puntuacio,
+            qualified:visto
+         });
+    }*/
 
      componentWillMount(){
         this.crear_tabla();
@@ -149,20 +171,19 @@ class Start extends Component {
 
         return (
             <div key={1000}>
-                <div>
-                    <div >
-                        <table>
-                                <thead>
-                                    <tr>
-                                        <th style={{width:80+'%'}}>CHALLENGE</th>
-                                        <th style={{width:4.5+'%'}}>QUALIFIED</th>
-                                        <th style={{width:4.5+'%'}}>CV</th>
-                                    </tr>     
-                                </thead> {this.state.tabla}
-                        </table>           
-                    </div>
+            <div>
+                <div className="Table-1" style={{width:90+'%',marginTop:5+'%',marginBottom:5+'%',marginLeft:5+'%',marginRight:5+'%'}}>
+                <div className="Heading-1"> 
+                <div className="Cell-1" style={{width:72+'%'}}>
+                CHALLENGE</div>
+                                <div className="Cell-1" >QUALIFIED</div>
+                                <div className="Cell-1" style={{width:4.5+'%'}}>CV</div>
+                     
+                </div>                                
+                            {this.state.tabla}          
                 </div>
-            </div>            
+            </div>
+            </div>  
         );
     }
 }

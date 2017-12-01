@@ -176,7 +176,7 @@ a.a:link
 }
 
 .sect-UI{
-    height: 400px;
+    height: 300px;
     border-bottom: 4px solid #fff;
     padding: 180px 0 0;
 }
@@ -358,3 +358,62 @@ hr {
     float:left;
     text-align: center;
 }
+
+
+.Table-1  
+
+      {  
+
+          display: table;  
+
+      }  
+
+      .Title-1  
+
+      {  
+
+          display: table-caption;  
+
+          text-align: center;  
+
+          font-weight: bold;  
+
+          font-size: larger;  
+
+      }  
+
+      .Heading-1
+
+      {  
+
+          display: table-row;  
+
+          font-weight: bold;  
+
+          text-align: center;  
+
+      }  
+
+      .Row-1 
+
+      {  
+
+          display: table-row;  
+
+      }  
+
+      .Cell-1
+
+      {  
+
+          display: table-cell;  
+
+          border: solid;  
+
+          border-width: thin;  
+
+          padding-left: 5px;  
+
+          padding-right: 5px;  
+
+      }
