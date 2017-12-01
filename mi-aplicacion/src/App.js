@@ -9,18 +9,20 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      estado:1
+      estado:0
     }
+    this.change_state=this.change_state.bind(this);
   }
+
+  change_state(esta){
+    this.setState({estado:esta});
+  }
+  
   render() {
     return (
       
       <div className="App">
-        {
-          (
-            this.state.estado === 0
-            ?
-              <div>
+        <div>
                   <section id="one"  className="sect-UI halo">
                     <h1 className="title">
                       WELCOME TO ADMIN CHALLENGES
@@ -28,11 +30,16 @@ class App extends Component {
                   </section>
                   <div align= "center" id="button">
                             <button  type="button" class="btn btn-primary">VIEW CHALLENGES</button>
-                            <button  type="button" class="btn btn-primary">VIEW RESULTS CHALLENGES</button>
+                            <button  type="button" class="btn btn-primary" onClick={this.change_state.bind(this,1)}>VIEW RESULTS CHALLENGES</button>
                   </div>
-                  <Start>
-                  </Start>
+                  
               </div>
+        {
+          (
+            this.state.estado === 0
+            ?
+            <Start>
+            </Start>
             :
            ''
           )
