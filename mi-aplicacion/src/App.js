@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      estado:0
+      estado:1
     }
     this.change_state=this.change_state.bind(this);
   }
