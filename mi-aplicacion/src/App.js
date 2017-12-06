@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      estado:1
+      estado:2
     }
     this.change_state=this.change_state.bind(this);
   }
@@ -20,7 +20,6 @@ class App extends Component {
   
   render() {
     return (
-      
       <div className="App">
         <div>
                   <section id="one"  className="sect-UI halo">
@@ -29,17 +28,19 @@ class App extends Component {
                     </h1>
                   </section>
                   <div align= "center" id="button">
-                            <button  type="button" className="btn btn-primary">VIEW CHALLENGES</button>
+                            <button  type="button" className="btn btn-primary" onClick={this.change_state.bind(this,2)}>VIEW CHALLENGES</button>
                             <button  type="button" className="btn btn-primary" onClick={this.change_state.bind(this,1)}>VIEW RESULTS CHALLENGES</button>
                   </div>
                   
               </div>
         {
           (
-            this.state.estado === 0
+            this.state.estado === 2
             ?
-            <Start>
-            </Start>
+            <div style={{marginTop:60+'px'}}>
+           <View_Result></View_Result>
+            
+          </div>
             :
            ''
           )
@@ -49,7 +50,7 @@ class App extends Component {
             this.state.estado === 1
             ?
               <div style={{marginTop:60+'px'}}>
-                  <View_Result></View_Result>
+                  <Start></Start>
               </div>
             :
               ''

@@ -33,7 +33,7 @@ class View_Result extends Component {
                     <span className="glyphicon glyphicon-star-empty" key={i+start_total}></span>
                 </button>
             );  
-        }
+        } 
         return html_start;
     }    
     
