@@ -120,18 +120,18 @@ class View_Result extends Component {
                 filassMostrar.push(
                     
                         <tr key={key}>
-                            <td className=" Cell-1">
+                            <td>
                                 {retos}
                             </td>
-                            <td className=" Cell-1" style={{paddingTop:25+'px'}}>
+                            <td style={{paddingTop:25+'px'}}>
                                 {this.renderar_start(datas[key].puntuacion,5,key)}
                             </td>
-                            <td className=" Cell-1" style={{paddingTop:25+'px'}}>
+                            <td style={{paddingTop:25+'px'}}>
                                 <a href={datas[key].CVURL} target="_blank" className="icon">
                                     <span className="glyphicon glyphicon-download-alt "></span>
                                 </a>
                             </td>
-                            <td className=" Cell-1" style={{paddingTop:25+'px'}}>
+                            <td style={{paddingTop:25+'px'}}>
                                 <button type="button"  className="icon" onClick={this.visto.bind(this, key)}>
                                     <span className={datas[key].qualified+' icon'}></span>
                                 </button>

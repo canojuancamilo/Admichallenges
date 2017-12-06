@@ -159,7 +159,7 @@ a.a:link
 }
 
 .icon-visto{
-    color: #4026C2;
+    color: rgb(90, 156, 236);
    }
 
 .icon{
@@ -356,4 +356,7 @@ hr {
 .view_table{
     float:left;
     text-align: center;
+}
+table td {
+	background-color: #FFFCFC;
 }
