@@ -159,11 +159,10 @@ a.a:link
 }
 
 .icon-visto{
-    color: #4026C2;
+    color: rgb(90, 156, 236);
    }
 
 .icon{
-    margin:2%;
     font-size: 30px;
     background-color: transparent;
     border:0;
@@ -358,62 +357,6 @@ hr {
     float:left;
     text-align: center;
 }
-
-
-.Table-1  
-
-      {  
-
-          display: table;  
-
-      }  
-
-      .Title-1  
-
-      {  
-
-          display: table-caption;  
-
-          text-align: center;  
-
-          font-weight: bold;  
-
-          font-size: larger;  
-
-      }  
-
-      .Heading-1
-
-      {  
-
-          display: table-row;  
-
-          font-weight: bold;  
-
-          text-align: center;  
-
-      }  
-
-      .Row-1 
-
-      {  
-
-          display: table-row;  
-
-      }  
-
-      .Cell-1
-
-      {  
-
-          display: table-cell;  
-
-          border: solid;  
-
-          border-width: thin;  
-
-          padding-left: 5px;  
-
-          padding-right: 5px;  
-
-      }
+table td {
+	background-color: #FFFCFC;
+}

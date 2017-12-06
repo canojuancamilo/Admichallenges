@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      estado:2
+      estado:1
     }
     this.change_state=this.change_state.bind(this);
   }
@@ -28,8 +28,8 @@ class App extends Component {
                     </h1>
                   </section>
                   <div align= "center" id="button">
-                            <button  type="button" className="btn btn-primary" onClick={this.change_state.bind(this,2)}>VIEW CHALLENGES</button>
-                            <button  type="button" className="btn btn-primary" onClick={this.change_state.bind(this,1)}>VIEW RESULTS CHALLENGES</button>
+                            <button  type="button" className="btn btn-primary" onClick={this.change_state.bind(this,1)}>VIEW CHALLENGES</button>
+                            <button  type="button" className="btn btn-primary" onClick={this.change_state.bind(this,2)}>VIEW RESULTS CHALLENGES</button>
                   </div>
                   
               </div>
